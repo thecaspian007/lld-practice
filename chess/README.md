@@ -18,6 +18,23 @@ Game (Singleton) → Board → Cell[8][8] → Piece (Abstract)
            └── MoveCommand (Command Pattern)
 ```
 
+High-Level Design (5 mins)
+"Here's my class structure..."
+
+Game (Singleton) ─── manages ──► Board ─── contains ──► Cell[8][8]
+     │                              │
+     │                              └── holds ──► Piece (Abstract)
+     │                                              ├── King
+     │                                              ├── Queen
+     │                                              ├── Rook
+     │                                              ├── Bishop
+     │                                              ├── Knight
+     │                                              └── Pawn
+     │
+     ├── Player (White/Black)
+     │
+     └── MoveCommand (Command Pattern) ──► enables Undo/Redo
+
 ### Phase 3: Implementation (25-30 mins)
 Working code with demonstrations.
 
