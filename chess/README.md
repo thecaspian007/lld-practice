@@ -1,5 +1,11 @@
 # Chess LLD - Interview Solution
 
+## 🖥️ Expected UI
+
+![Chess Console UI](chess_ui.png)
+
+---
+
 ## 📋 Interview Flow (30-40 mins)
 
 ### Phase 1: Requirements (2-3 mins)
@@ -17,23 +23,6 @@ Game (Singleton) → Board → Cell[8][8] → Piece (Abstract)
            ├── Player (White/Black)
            └── MoveCommand (Command Pattern)
 ```
-
-High-Level Design (5 mins)
-"Here's my class structure..."
-
-Game (Singleton) ─── manages ──► Board ─── contains ──► Cell[8][8]
-     │                              │
-     │                              └── holds ──► Piece (Abstract)
-     │                                              ├── King
-     │                                              ├── Queen
-     │                                              ├── Rook
-     │                                              ├── Bishop
-     │                                              ├── Knight
-     │                                              └── Pawn
-     │
-     ├── Player (White/Black)
-     │
-     └── MoveCommand (Command Pattern) ──► enables Undo/Redo
 
 ### Phase 3: Implementation (25-30 mins)
 Working code with demonstrations.
@@ -116,3 +105,17 @@ quit     - Exit game
 2. **Explain trade-offs** - "I'm keeping it simple for time"
 3. **Be incremental** - Get basic movement working first
 4. **Test as you code** - Show it works at each step
+
+Game (Singleton) ─── manages ──► Board ─── contains ──► Cell[8][8]
+     │                              │
+     │                              └── holds ──► Piece (Abstract)
+     │                                              ├── King
+     │                                              ├── Queen
+     │                                              ├── Rook
+     │                                              ├── Bishop
+     │                                              ├── Knight
+     │                                              └── Pawn
+     │
+     ├── Player (White/Black)
+     │
+     └── MoveCommand (Command Pattern) ──► enables Undo/Redo
